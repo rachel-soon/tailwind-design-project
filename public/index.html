@@ -3,17 +3,16 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Labnine</title>
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body class="font-body">
     <!-- navigation bar -->
     <header>
       <nav
-        class="grid grid-cols-3 gap-4 text-xs p-4 px-20 mb-4 font-medium bg-secondary text-muted"
+        class="grid grid-cols-3 gap-4 text-xs p-4 px-32 mb-4 font-medium bg-secondary text-muted"
       >
-        <div></div>
-        <div class="text-center">
+        <div class="col-span-2 text-end mr-16">
           Opening Hours: Monday to Saturday - 8am to 9pm
         </div>
         <div class="text-end">Contact: +1-800-654-3210</div>
@@ -21,7 +20,7 @@
     </header>
 
     <!-- Logo, menu and cta button -->
-    <div class="flex justify-between px-20">
+    <div class="flex justify-between px-32">
       <div class="hover:cursor-pointer">
         <svg
           width="114"
@@ -62,25 +61,460 @@
     </div>
 
     <!-- Hero banner -->
-    <div class="grid grid-cols-2 px-20">
+    <div class="grid grid-cols-2 px-32 mb-10">
       <div class="pt-32">
-        <div class="font-semibold text-7xl pr-60">
+        <div class="font-semibold text-7xl pr-56">
           Get Better Care For<span class="text-emphasis">-</span> Your
           Health<span class="text-emphasis">.</span>
         </div>
-        <div class="text-muted text-sm w-96 my-6">
+        <div class="text-muted text-md w-8/12 my-6">
           Quisque leo augue, lobortis ac tellus nec, posuere ultricies nulla.
           Praesent massa odio,
         </div>
         <div class="my-10">
-          <span
+          <button
             class="bg-emphasis text-white rounded-md p-4 px-10 hover:cursor-pointer"
-            >Learn More</span
           >
+            Learn More
+          </button>
         </div>
       </div>
       <div>
-        <img src="/assets/hero-banner-img.png" alt="hero-banner" />
+        <img
+          src="/assets/hero-banner-img.png"
+          alt="hero-banner"
+          class="object-cover"
+        />
+      </div>
+    </div>
+
+    <!-- Two boxes beneath hero banner -->
+    <div class="grid grid-cols-2 px-32 gap-7 mb-20">
+      <!-- wraping container -->
+      <div class="bg-secondary p-10">
+        <div class="text-muted">
+          <span class="font-bold">Lorem ipsum dolor sit amet,</span>
+          <br />
+          consectetuer adipiscing elit, sed
+        </div>
+        <div class="mt-6">
+          <button
+            class="bg-emphasis text-white rounded-lg hover:cursor-pointer p-4 px-14"
+          >
+            Make an appointment
+          </button>
+        </div>
+      </div>
+      <!-- wrapping container -->
+      <div class="bg-secondary p-10 pt-16">
+        <div class="text-muted text-3xl font-bold">
+          <svg
+            class="w-6 inline-block mr-2"
+            fill="#032FF2"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+            aria-hidden="true"
+          >
+            <path
+              clip-rule="evenodd"
+              fill-rule="evenodd"
+              d="M1.5 4.5a3 3 0 013-3h1.372c.86 0 1.61.586 1.819 1.42l1.105 4.423a1.875 1.875 0 01-.694 1.955l-1.293.97c-.135.101-.164.249-.126.352a11.285 11.285 0 006.697 6.697c.103.038.25.009.352-.126l.97-1.293a1.875 1.875 0 011.955-.694l4.423 1.105c.834.209 1.42.959 1.42 1.82V19.5a3 3 0 01-3 3h-2.25C8.552 22.5 1.5 15.448 1.5 6.75V4.5z"
+            ></path>
+          </svg>
+          Emergency Call
+        </div>
+        <div class="font-bold text-5xl mt-2">+8 12 3456897</div>
+      </div>
+    </div>
+
+    <!-- Staggered cards -->
+    <div class="grid grid-cols-3 px-32 gap-6 relative mb-72">
+      <!-- Online Emergency -->
+      <div class="shadow-xl px-20 py-10 text-center relative top-20">
+        <div class="text-3xl font-bold text-muted">
+          Online <br />
+          <span class="text-emphasis">Emergency</span>
+        </div>
+        <div class="text-muted text-sm my-4">
+          Mauris nunc felis, congue eu convallis in, bibendum vitae nisl. Duis
+          vestibulum eget orci maximus pretium.
+        </div>
+        <div class="flex justify-center">
+          <img
+            src="assets/online-emergency.png"
+            alt="online emergency"
+            class="w-20"
+          />
+        </div>
+      </div>
+      <!-- Medication Service -->
+      <div class="shadow-xl px-20 py-10 text-center">
+        <div class="text-3xl font-bold text-muted">
+          Medication <br />
+          <span class="text-emphasis">Service</span>
+        </div>
+        <div class="text-muted text-sm my-4">
+          Mauris nunc felis, congue eu convallis in, bibendum vitae nisl. Duis
+          vestibulum eget orci maximus pretium.
+        </div>
+        <div class="flex justify-center">
+          <img
+            src="assets/medication-service.png"
+            alt="online emergency"
+            class="w-20"
+          />
+        </div>
+      </div>
+      <!-- 24hr Health Program -->
+      <div class="shadow-xl px-20 py-10 text-center relative top-44">
+        <div class="text-3xl font-bold text-muted">
+          24hr Health <br />
+          <span class="text-emphasis">Program</span>
+        </div>
+        <div class="text-muted text-sm my-4">
+          Mauris nunc felis, congue eu convallis in, bibendum vitae nisl. Duis
+          vestibulum eget orci maximus pretium.
+        </div>
+        <div class="flex justify-center">
+          <img
+            src="assets/24hr-health-program.png"
+            alt="online emergency"
+            class="w-20"
+          />
+        </div>
+      </div>
+    </div>
+
+    <div class="bg-secondary grid grid-cols-2 px-32">
+      <div class="flex justify-center">
+        <img
+          src="assets/focus-image.png"
+          alt="cta"
+          class="object-contain w-3/4"
+        />
+      </div>
+      <div class="py-20 grid grid-row-4 w-10/12">
+        <div class="text-5xl font-semibold mb-5">
+          About Our <span class="text-emphasis">Hospital</span>
+        </div>
+        <div class="text-muted mb-5">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum
+          suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan
+          lacus vel facilisis.
+        </div>
+        <div class="text-md">
+          <div class="text-muted my-3">
+            <img
+              class="inline-block mr-14"
+              src="assets/triple-arrow.svg"
+              alt="triple arrow bullet point"
+            />Browse Our Website
+          </div>
+          <div class="text-muted my-3">
+            <img
+              class="inline-block mr-14"
+              src="assets/triple-arrow.svg"
+              alt="triple arrow bullet point"
+            />Choose Service
+          </div>
+          <div class="text-muted my-3">
+            <img
+              class="inline-block mr-14"
+              src="assets/triple-arrow.svg"
+              alt="triple arrow bullet point"
+            />Send Message
+          </div>
+        </div>
+        <div class="mt-8">
+          <span
+            class="rounded-lg text-white bg-emphasis p-4 px-24 text-md font-bold cursor-pointer w-96"
+          >
+            Know More</span
+          >
+        </div>
+      </div>
+    </div>
+
+    <!-- Latest News -->
+    <div class="mt-48 relative">
+      <div class="text-center text-2xl font-semibold">
+        <div>LATEST NEWS</div>
+      </div>
+      <div class="w-24 h-px mx-auto my-2 relative right-8 bg-emphasis"></div>
+      <div class="w-24 h-px mx-auto my-2 bg-emphasis relative left-8"></div>
+
+      <!-- Staggered cards -->
+      <div class="my-3 grid grid-cols-4 gap-3 px-32 mt-10">
+        <div class="shadow-xl p-5 w-11/12">
+          <div>
+            <img src="assets/news-1.png" alt="news image" />
+          </div>
+          <div class="text-lg w-10/12">
+            Praesent justo mauris, tincidunt vitae nisi ultricies.
+          </div>
+          <div class="my-4 text-muted">
+            Aenean sed velit nulla. Etiam viverra scelerisque porta. Quisque ut
+            dolor aliquam, gravida lacus.
+          </div>
+          <div class="mt-5">
+            Read More
+            <svg
+              class="inline-block w-7"
+              fill="none"
+              stroke="#032FF2"
+              stroke-width="1.5"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+              aria-hidden="true"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3"
+              ></path>
+            </svg>
+          </div>
+        </div>
+        <div class="shadow-xl p-5 w-11/12 relative top-24">
+          <div>
+            <img src="assets/news-2.png" alt="news image" />
+          </div>
+          <div class="text-lg w-10/12">
+            Praesent justo mauris, tincidunt vitae nisi ultricies.
+          </div>
+          <div class="my-4 text-muted">
+            Aenean sed velit nulla. Etiam viverra scelerisque porta. Quisque ut
+            dolor aliquam, gravida lacus.
+          </div>
+          <div class="mt-5">
+            Read More
+            <svg
+              class="inline-block w-7"
+              fill="none"
+              stroke="#032FF2"
+              stroke-width="1.5"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+              aria-hidden="true"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3"
+              ></path>
+            </svg>
+          </div>
+        </div>
+        <div class="shadow-xl p-5 w-11/12">
+          <div>
+            <img src="assets/news-3.png" alt="news image" />
+          </div>
+          <div class="text-lg w-10/12">
+            Praesent justo mauris, tincidunt vitae nisi ultricies.
+          </div>
+          <div class="my-4 text-muted">
+            Aenean sed velit nulla. Etiam viverra scelerisque porta. Quisque ut
+            dolor aliquam, gravida lacus.
+          </div>
+          <div class="mt-5">
+            Read More
+            <svg
+              class="inline-block w-7"
+              fill="none"
+              stroke="#032FF2"
+              stroke-width="1.5"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+              aria-hidden="true"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3"
+              ></path>
+            </svg>
+          </div>
+        </div>
+        <div class="shadow-xl p-5 w-11/12 relative top-24">
+          <div>
+            <img src="assets/news-4.png" alt="news image" />
+          </div>
+          <div class="text-lg w-10/12">
+            Praesent justo mauris, tincidunt vitae nisi ultricies.
+          </div>
+          <div class="my-4 text-muted">
+            Aenean sed velit nulla. Etiam viverra scelerisque porta. Quisque ut
+            dolor aliquam, gravida lacus.
+          </div>
+          <div class="mt-5">
+            Read More
+            <svg
+              class="inline-block w-7"
+              fill="none"
+              stroke="#032FF2"
+              stroke-width="1.5"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+              aria-hidden="true"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3"
+              ></path>
+            </svg>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Medical Departments banner -->
+    <div class="grid grid-cols-2 bg-secondary mt-64 px-32 py-16">
+      <div>
+        <div class="uppercase text-3xl font-semibold my-2">
+          Medical Departments
+        </div>
+        <div class="flex ml-36 mb-6">
+          <div class="w-16 inline-block h-px bg-emphasis mt-4"></div>
+          <div class="ml-3 text-muted font-semibold text-lg">
+            The Backbone of our Clinic
+          </div>
+        </div>
+
+        <div class="flex">
+          <div class="mr-3 text-muted text-lg font-semibold">
+            MODERN EQUIPMENT
+          </div>
+          <div class="w-16 inline-block h-px bg-emphasis mt-3"></div>
+        </div>
+
+        <div class="font-semibold text-muted w-11/12 my-3 mb-10 leading-7">
+          Personalized patient care is what sets Medicus Medical Center apart.
+          When you visit one of our four San Francisco campus locations you can
+          expect to receive world class care. Expert physician specialists and
+          caring clinical staff provide you with an exceptional patient care is
+          what sets Medicus Medical Center apart health care experience.
+        </div>
+
+        <div class="grid grid-cols-3 gap-8 w-11/12 text-muted">
+          <div class="bg-white rounded-md shadow-xl uppercase p-4 text-center">
+            Surgery
+          </div>
+          <div class="bg-white rounded-md shadow-xl uppercase p-4 text-center">
+            Microbiology
+          </div>
+          <div class="bg-white rounded-md shadow-xl uppercase p-4 text-center">
+            Pathology
+          </div>
+        </div>
+
+        <div class="text-center mt-10">
+          <button class="uppercase bg-emphasis p-5 text-white rounded-xl mr-12">
+            Checkout all departments
+          </button>
+        </div>
+      </div>
+      <div>
+        <img
+          src="assets/medical-departments-banner.png"
+          alt="medical department"
+        />
+      </div>
+    </div>
+
+    <div class="my-20">
+      <div class="mb-12">
+        <div class="text-center text-3xl font-semibold">
+          <div>Medical Specialists</div>
+        </div>
+        <div class="w-40 h-px mx-auto my-2 relative right-16 bg-emphasis"></div>
+        <div class="w-40 h-px mx-auto my-2 bg-emphasis relative left-16"></div>
+      </div>
+
+      <div class="grid grid-cols-3 gap-10 px-32">
+        <div class="bg-white shadow-xl">
+          <div>
+            <img src="assets/doctor-1.png" alt="doctor 1" />
+          </div>
+          <div class="px-6 pt-6 font-semibold text-muted">
+            Dr. Addison Alexander
+          </div>
+          <div class="px-6 p-3">Cardiac Clinic, Primary Health Care</div>
+        </div>
+        <div class="bg-white shadow-xl">
+          <div>
+            <img src="assets/doctor-2.png" alt="doctor 1" />
+          </div>
+          <div class="px-6 pt-6 font-semibold text-muted">
+            Dr. Addison Alexander
+          </div>
+          <div class="px-6 p-3">Cardiac Clinic, Primary Health Care</div>
+        </div>
+        <div class="bg-white shadow-xl">
+          <div>
+            <img src="assets/doctor-3.png" alt="doctor 1" />
+          </div>
+          <div class="px-6 pt-6 font-semibold text-muted">
+            Dr. Addison Alexander
+          </div>
+          <div class="px-6 p-3">Cardiac Clinic, Primary Health Care</div>
+        </div>
+      </div>
+    </div>
+
+    <div>
+      <div class="mb-24">
+        <div class="text-center text-3xl font-semibold">
+          <div>Reliable Services</div>
+        </div>
+        <div class="w-40 h-px mx-auto my-2 relative right-16 bg-emphasis"></div>
+        <div class="w-40 h-px mx-auto my-2 bg-emphasis relative left-16"></div>
+      </div>
+
+      <div class="grid grid-cols-3 my-6 gap-16 px-32 mx-auto">
+        <div>
+          <div>
+            <img
+              src="assets/dental-implants-1.png"
+              alt="dentail implants 1"
+              class="w-72"
+            />
+          </div>
+          <div class="font-bold text-xl my-6 mt-12">Dental Implants</div>
+          <div class="text-muted">
+            Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
+            nonummy nibh…
+          </div>
+        </div>
+        <div>
+          <div>
+            <img
+              src="assets/dental-implants-2.png"
+              alt="dentail implants 2"
+              class="w-60"
+            />
+          </div>
+          <div class="font-bold text-xl my-6 mt-12">Dental Implants</div>
+          <div class="text-muted">
+            Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
+            nonummy nibh…
+          </div>
+        </div>
+        <div>
+          <div>
+            <img
+              src="assets/dental-implants-3.png"
+              alt="dentail implants 3"
+              class="w-72"
+            />
+          </div>
+          <div class="font-bold text-xl my-6 mt-12">Dental Implants</div>
+          <div class="text-muted">
+            Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
+            nonummy nibh…
+          </div>
+        </div>
       </div>
     </div>
   </body>
