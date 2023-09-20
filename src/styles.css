@@ -6,26 +6,26 @@
 @tailwind utilities;
 
 .section {
-  @apply px-32;
+  @apply lg:px-32 px-10;
 }
 
 .header-nav {
-  @apply grid grid-cols-3 gap-4 text-xs p-4 px-32 mb-4 font-medium bg-secondary text-muted;
+  @apply grid lg:grid-cols-4 grid-cols-2 gap-4 text-xs p-4 mb-4 font-medium bg-secondary text-muted;
 }
 
 .header-nav__opening-hours {
-  @apply col-span-2 text-end mr-16;
+  @apply lg:col-span-3 lg:text-end lg:mr-32 text-start;
 }
 
 .header-nav__contact {
-  @apply text-end;
+  @apply lg:text-end lg:col-span-1 text-end;
 }
 .menu-nav {
-  @apply flex justify-between uppercase gap-7 font-semibold text-muted;
+  @apply justify-between uppercase gap-7 font-semibold text-muted;
 }
 
 .btn-primary {
-  @apply bg-emphasis text-white rounded-md p-4 px-16 hover:cursor-pointer;
+  @apply bg-emphasis text-white rounded-md p-4 lg:px-16 hover:cursor-pointer;
 }
 
 .btn-secondary {
@@ -41,18 +41,18 @@
 }
 
 .hero-banner__title {
-  @apply font-semibold text-7xl;
+  @apply font-semibold lg:text-7xl text-3xl;
 }
 
 .hero-banner__desc {
-  @apply text-muted w-8/12 my-6;
+  @apply text-muted lg:w-8/12 my-6;
 }
 .hero-banner__btn {
   @apply my-10;
 }
 
 .services {
-  @apply grid grid-cols-3 px-32 gap-6 relative mb-72;
+  @apply grid lg:grid-cols-3 gap-6 relative mb-72;
 }
 
 .services__card {
@@ -76,7 +76,7 @@
 }
 
 .banner-secondary {
-  @apply bg-secondary grid grid-cols-2;
+  @apply bg-secondary grid lg:grid-cols-2;
 }
 
 .banner-secondary__img-container {
@@ -84,15 +84,15 @@
 }
 
 .banner-secondary__img-container img {
-  @apply object-contain w-3/4;
+  @apply object-contain lg:w-3/4;
 }
 
 .banner-secondary__text-section {
-  @apply py-20 w-10/12;
+  @apply lg:py-20 pb-20 lg:w-10/12;
 }
 
 .banner-secondary__title {
-  @apply text-5xl font-semibold;
+  @apply lg:text-5xl text-3xl font-semibold;
 }
 
 .banner-secondary__desc {
@@ -109,15 +109,15 @@
 }
 
 .latest-news__cards-section {
-  @apply my-3 grid grid-cols-4 gap-3 px-32 mt-10;
+  @apply my-3 grid lg:grid-cols-4 gap-3 mt-10;
 }
 
 .latest-news__card {
-  @apply shadow-xl p-5 w-11/12;
+  @apply shadow-xl p-5 lg:w-11/12;
 }
 
 .latest-news__card-title {
-  @apply text-lg w-10/12;
+  @apply text-lg lg:w-10/12;
 }
 
 .latest-news__card-desc {

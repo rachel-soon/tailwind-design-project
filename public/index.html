@@ -7,7 +7,6 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <!-- TODO: modularize -->
-  <!-- TODO: footer -->
   <!-- TODO: mobile responsiveness -->
   <!-- TODO: reusability with @apply directive & javascript objects -->
   <!-- TODO: enhance with animations & transitions -->
@@ -15,21 +14,21 @@
   <body class="font-body">
     <!-- navigation bar -->
     <header>
-      <nav class="header-nav">
+      <div class="header-nav section">
         <div class="header-nav__opening-hours">
           Opening Hours: Monday to Saturday - 8am to 9pm
         </div>
         <div class="header-nav__contact">Contact: +1-800-654-3210</div>
-      </nav>
+      </div>
     </header>
 
     <!-- Logo, menu and cta button -->
-    <div class="flex justify-between px-32">
-      <div class="hover:cursor-pointer">
+    <div class="flex justify-between section content-center">
+      <div class="hover:cursor-pointer order-1 mt-2">
         <img src="assets/labninelogo.svg" alt="Labnine logo" />
       </div>
-      <div>
-        <div class="menu-nav">
+      <div class="lg:order-2 order-3">
+        <div class="menu-nav lg:flex hidden">
           <div>Home</div>
           <div>About us</div>
           <div>Doctor</div>
@@ -38,17 +37,36 @@
           <div>Blog</div>
           <div>Shop</div>
         </div>
+        <div class="lg:hidden flex justify-center content-center mt-2">
+          <!-- Hamburger icon -->
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            class="w-6 h-6"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+            />
+          </svg>
+        </div>
       </div>
-      <div class="justify-end">
+      <div class="justify-end lg:order-3 order-2">
         <button class="btn-secondary">Get Appertment</button>
       </div>
     </div>
 
     <!-- Hero banner -->
     <div class="hero-banner section my-10">
-      <div class="hero-banner__text-section">
+      <div
+        class="hero-banner__text-section lg:col-span-1 lg:order-1 col-span-2 order-2"
+      >
         <div class="hero-banner__title">
-          Get Better <br />
+          Get Better <br class="hidden lg:block" />
           Care For<span class="text-emphasis">-</span> <br />
           Your Health<span class="text-emphasis">.</span>
         </div>
@@ -60,7 +78,7 @@
           <button class="btn-primary">Learn More</button>
         </div>
       </div>
-      <div>
+      <div class="lg:col-span-1 lg:order-2 col-span-2 order-1">
         <img
           src="/assets/hero-banner-img.png"
           alt="hero-banner"
@@ -70,9 +88,9 @@
     </div>
 
     <!-- Two boxes beneath hero banner -->
-    <div class="grid grid-cols-2 px-32 gap-7 mb-20">
+    <div class="grid grid-cols-2 gap-7 mb-20 section">
       <!-- wraping container -->
-      <div class="bg-secondary p-10">
+      <div class="bg-secondary p-10 lg:col-span-1 col-span-2">
         <div class="text-muted">
           <span class="font-bold">Lorem ipsum dolor sit amet,</span>
           <br />
@@ -83,7 +101,7 @@
         </div>
       </div>
       <!-- wrapping container -->
-      <div class="bg-secondary p-10 pt-16">
+      <div class="bg-secondary p-10 pt-16 lg:col-span-1 col-span-2">
         <div class="text-muted text-3xl font-bold">
           <svg
             class="w-6 inline-block mr-2"
@@ -105,9 +123,9 @@
     </div>
 
     <!-- Staggered cards -->
-    <div class="services">
+    <div class="services section">
       <!-- Online Emergency -->
-      <div class="services__card top-24">
+      <div class="services__card lg:top-24">
         <div class="services__card-title">
           Online <br />
           <span class="text-emphasis">Emergency</span>
@@ -135,7 +153,7 @@
         </div>
       </div>
       <!-- 24hr Health Program -->
-      <div class="services__card top-56">
+      <div class="services__card lg:top-56">
         <div class="services__card-title">
           24hr Health <br />
           <span class="text-emphasis">Program</span>
@@ -151,7 +169,7 @@
     </div>
 
     <div class="banner-secondary section my-10">
-      <div class="banner-secondary__img-container">
+      <div class="banner-secondary__img-container pt-10 lg:pt-auto">
         <img src="assets/focus-image.png" alt="cta" />
       </div>
       <div class="banner-secondary__text-section">
@@ -185,11 +203,11 @@
           </div>
         </div>
         <div class="mt-8">
-          <span
-            class="rounded-lg text-white bg-emphasis p-4 px-24 text-md font-bold cursor-pointer w-96"
+          <button
+            class="rounded-lg text-white bg-emphasis p-4 lg:px-24 text-md font-bold cursor-pointer lg:w-96 w-72"
           >
-            Know More</span
-          >
+            Know More
+          </button>
         </div>
       </div>
     </div>
@@ -203,7 +221,7 @@
       <div class="w-24 h-px mx-auto my-2 bg-emphasis relative left-8"></div>
 
       <!-- Staggered cards -->
-      <div class="latest-news__cards-section">
+      <div class="latest-news__cards-section section">
         <div class="latest-news__card">
           <div>
             <img src="assets/news-1.png" alt="News image" />
@@ -234,7 +252,7 @@
             </svg>
           </div>
         </div>
-        <div class="latest-news__card relative top-24">
+        <div class="latest-news__card relative lg:top-24">
           <div>
             <img src="assets/news-2.png" alt="news image" />
           </div>
@@ -294,7 +312,7 @@
             </svg>
           </div>
         </div>
-        <div class="latest-news__card relative top-24">
+        <div class="latest-news__card relative lg:top-24">
           <div>
             <img src="assets/news-4.png" alt="news image" />
           </div>
