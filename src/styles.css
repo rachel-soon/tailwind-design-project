@@ -1,6 +1,125 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
 /* required tailwind directives */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.section {
+  @apply px-32;
+}
+
+.header-nav {
+  @apply grid grid-cols-3 gap-4 text-xs p-4 px-32 mb-4 font-medium bg-secondary text-muted;
+}
+
+.header-nav__opening-hours {
+  @apply col-span-2 text-end mr-16;
+}
+
+.header-nav__contact {
+  @apply text-end;
+}
+.menu-nav {
+  @apply flex justify-between uppercase gap-7 font-semibold text-muted;
+}
+
+.btn-primary {
+  @apply bg-emphasis text-white rounded-md p-4 px-16 hover:cursor-pointer;
+}
+
+.btn-secondary {
+  @apply rounded-lg text-emphasis bg-secondary p-3 tracking-tight font-bold hover:cursor-pointer;
+}
+
+.hero-banner {
+  @apply grid grid-cols-2;
+}
+
+.hero-banner__text-section {
+  @apply pt-24;
+}
+
+.hero-banner__title {
+  @apply font-semibold text-7xl;
+}
+
+.hero-banner__desc {
+  @apply text-muted w-8/12 my-6;
+}
+.hero-banner__btn {
+  @apply my-10;
+}
+
+.services {
+  @apply grid grid-cols-3 px-32 gap-6 relative mb-72;
+}
+
+.services__card {
+  @apply shadow-xl px-16 py-10 text-center relative;
+}
+
+.services__card-title {
+  @apply text-3xl font-bold text-muted leading-relaxed;
+}
+
+.services__card-desc {
+  @apply text-muted mt-5 mb-10;
+}
+
+.services__card-img-container {
+  @apply flex justify-center;
+}
+
+.services__card-img-container img {
+  @apply w-20;
+}
+
+.banner-secondary {
+  @apply bg-secondary grid grid-cols-2;
+}
+
+.banner-secondary__img-container {
+  @apply flex justify-center;
+}
+
+.banner-secondary__img-container img {
+  @apply object-contain w-3/4;
+}
+
+.banner-secondary__text-section {
+  @apply py-20 w-10/12;
+}
+
+.banner-secondary__title {
+  @apply text-5xl font-semibold;
+}
+
+.banner-secondary__desc {
+  @apply text-muted mt-6 mb-10;
+}
+
+.banner-secondary__bullet-point {
+  @apply text-muted my-3;
+}
+
+/* this is the bullet point  */
+.banner-secondary__bullet-point img {
+  @apply inline-block mr-14;
+}
+
+.latest-news__cards-section {
+  @apply my-3 grid grid-cols-4 gap-3 px-32 mt-10;
+}
+
+.latest-news__card {
+  @apply shadow-xl p-5 w-11/12;
+}
+
+.latest-news__card-title {
+  @apply text-lg w-10/12;
+}
+
+.latest-news__card-desc {
+  @apply my-4 text-muted;
+}

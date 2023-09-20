@@ -9,43 +9,27 @@
   <!-- TODO: modularize -->
   <!-- TODO: footer -->
   <!-- TODO: mobile responsiveness -->
+  <!-- TODO: reusability with @apply directive & javascript objects -->
+  <!-- TODO: enhance with animations & transitions -->
 
   <body class="font-body">
     <!-- navigation bar -->
     <header>
-      <nav
-        class="grid grid-cols-3 gap-4 text-xs p-4 px-32 mb-4 font-medium bg-secondary text-muted"
-      >
-        <div class="col-span-2 text-end mr-16">
+      <nav class="header-nav">
+        <div class="header-nav__opening-hours">
           Opening Hours: Monday to Saturday - 8am to 9pm
         </div>
-        <div class="text-end">Contact: +1-800-654-3210</div>
+        <div class="header-nav__contact">Contact: +1-800-654-3210</div>
       </nav>
     </header>
 
     <!-- Logo, menu and cta button -->
     <div class="flex justify-between px-32">
       <div class="hover:cursor-pointer">
-        <svg
-          width="114"
-          height="30"
-          viewBox="0 0 114 30"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            d="M34.6 19.38H39.16V22H31.18V7.86H34.6V19.38ZM49.4908 19.42H44.1908L43.3108 22H39.7108L44.8908 7.96H48.8308L54.0108 22H50.3708L49.4908 19.42ZM48.6108 16.82L46.8508 11.62L45.0708 16.82H48.6108ZM63.8202 14.72C64.6735 14.92 65.3468 15.3333 65.8402 15.96C66.3468 16.5867 66.6002 17.3133 66.6002 18.14C66.6002 19.3533 66.1935 20.3 65.3802 20.98C64.5802 21.66 63.4268 22 61.9202 22H55.3402V7.86H61.7602C63.2002 7.86 64.3135 8.17333 65.1002 8.8C65.8868 9.42667 66.2802 10.32 66.2802 11.48C66.2802 12.3333 66.0535 13.0467 65.6002 13.62C65.1468 14.18 64.5535 14.5467 63.8202 14.72ZM58.7602 13.64H61.0002C62.1868 13.64 62.7802 13.1333 62.7802 12.12C62.7802 11.1067 62.1735 10.6 60.9602 10.6H58.7602V13.64ZM61.2002 19.22C62.4668 19.22 63.1002 18.7 63.1002 17.66C63.1002 17.1533 62.9335 16.76 62.6002 16.48C62.2668 16.1867 61.7935 16.04 61.1802 16.04H58.7602V19.22H61.2002ZM80.9666 22H77.5466L71.8266 13.32V22H68.4066V7.86H71.8266L77.5466 16.62V7.86H80.9666V22ZM86.7484 7.86V22H83.3284V7.86H86.7484ZM101.67 22H98.2497L92.5297 13.32V22H89.1097V7.86H92.5297L98.2497 16.62V7.86H101.67V22ZM107.452 10.58V13.54H112.232V16.12H107.452V19.26H112.832V22H104.032V7.86H112.832V10.58H107.452Z"
-            fill="#2B2E35"
-          />
-          <rect y="4" width="22" height="22" fill="#262433" />
-          <path
-            d="M15.72 16.58H12.26V20.1H8.96V16.58H5.5V13.44H8.96V9.9H12.26V13.44H15.72V16.58Z"
-            fill="white"
-          />
-        </svg>
+        <img src="assets/labninelogo.svg" alt="Labnine logo" />
       </div>
       <div>
-        <div class="flex justify-between menu-nav uppercase gap-7">
+        <div class="menu-nav">
           <div>Home</div>
           <div>About us</div>
           <div>Doctor</div>
@@ -55,39 +39,32 @@
           <div>Shop</div>
         </div>
       </div>
-      <div class="justify-self-end">
-        <span
-          class="rounded-lg text-emphasis bg-secondary p-3 uppercase text-xs font-bold cursor-pointer tracking-wider"
-        >
-          Get Appointment</span
-        >
+      <div class="justify-end">
+        <button class="btn-secondary">Get Appertment</button>
       </div>
     </div>
 
     <!-- Hero banner -->
-    <div class="grid grid-cols-2 px-32 mb-10">
-      <div class="pt-32">
-        <div class="font-semibold text-7xl pr-56">
-          Get Better Care For<span class="text-emphasis">-</span> Your
-          Health<span class="text-emphasis">.</span>
+    <div class="hero-banner section my-10">
+      <div class="hero-banner__text-section">
+        <div class="hero-banner__title">
+          Get Better <br />
+          Care For<span class="text-emphasis">-</span> <br />
+          Your Health<span class="text-emphasis">.</span>
         </div>
-        <div class="text-muted text-md w-8/12 my-6">
+        <div class="hero-banner__desc">
           Quisque leo augue, lobortis ac tellus nec, posuere ultricies nulla.
           Praesent massa odio,
         </div>
-        <div class="my-10">
-          <button
-            class="bg-emphasis text-white rounded-md p-4 px-10 hover:cursor-pointer"
-          >
-            Learn More
-          </button>
+        <div class="hero-banner__btn">
+          <button class="btn-primary">Learn More</button>
         </div>
       </div>
       <div>
         <img
           src="/assets/hero-banner-img.png"
           alt="hero-banner"
-          class="object-cover"
+          class="w-full"
         />
       </div>
     </div>
@@ -102,11 +79,7 @@
           consectetuer adipiscing elit, sed
         </div>
         <div class="mt-6">
-          <button
-            class="bg-emphasis text-white rounded-lg hover:cursor-pointer p-4 px-14"
-          >
-            Make an appointment
-          </button>
+          <button class="btn-primary uppercase">Make an appointment</button>
         </div>
       </div>
       <!-- wrapping container -->
@@ -132,99 +105,80 @@
     </div>
 
     <!-- Staggered cards -->
-    <div class="grid grid-cols-3 px-32 gap-6 relative mb-72">
+    <div class="services">
       <!-- Online Emergency -->
-      <div class="shadow-xl px-20 py-10 text-center relative top-20">
-        <div class="text-3xl font-bold text-muted">
+      <div class="services__card top-24">
+        <div class="services__card-title">
           Online <br />
           <span class="text-emphasis">Emergency</span>
         </div>
-        <div class="text-muted text-sm my-4">
+        <div class="services__card-desc">
           Mauris nunc felis, congue eu convallis in, bibendum vitae nisl. Duis
           vestibulum eget orci maximus pretium.
         </div>
-        <div class="flex justify-center">
-          <img
-            src="assets/online-emergency.png"
-            alt="online emergency"
-            class="w-20"
-          />
+        <div class="services__card-img-container">
+          <img src="assets/online-emergency.png" alt="online emergency" />
         </div>
       </div>
       <!-- Medication Service -->
-      <div class="shadow-xl px-20 py-10 text-center">
-        <div class="text-3xl font-bold text-muted">
+      <div class="services__card">
+        <div class="services__card-title">
           Medication <br />
           <span class="text-emphasis">Service</span>
         </div>
-        <div class="text-muted text-sm my-4">
+        <div class="services__card-desc">
           Mauris nunc felis, congue eu convallis in, bibendum vitae nisl. Duis
           vestibulum eget orci maximus pretium.
         </div>
-        <div class="flex justify-center">
-          <img
-            src="assets/medication-service.png"
-            alt="online emergency"
-            class="w-20"
-          />
+        <div class="services__card-img-container">
+          <img src="assets/medication-service.png" alt="online emergency" />
         </div>
       </div>
       <!-- 24hr Health Program -->
-      <div class="shadow-xl px-20 py-10 text-center relative top-44">
-        <div class="text-3xl font-bold text-muted">
+      <div class="services__card top-56">
+        <div class="services__card-title">
           24hr Health <br />
           <span class="text-emphasis">Program</span>
         </div>
-        <div class="text-muted text-sm my-4">
+        <div class="services__card-desc">
           Mauris nunc felis, congue eu convallis in, bibendum vitae nisl. Duis
           vestibulum eget orci maximus pretium.
         </div>
-        <div class="flex justify-center">
-          <img
-            src="assets/24hr-health-program.png"
-            alt="online emergency"
-            class="w-20"
-          />
+        <div class="services__card-img-container">
+          <img src="assets/24hr-health-program.png" alt="online emergency" />
         </div>
       </div>
     </div>
 
-    <div class="bg-secondary grid grid-cols-2 px-32">
-      <div class="flex justify-center">
-        <img
-          src="assets/focus-image.png"
-          alt="cta"
-          class="object-contain w-3/4"
-        />
+    <div class="banner-secondary section my-10">
+      <div class="banner-secondary__img-container">
+        <img src="assets/focus-image.png" alt="cta" />
       </div>
-      <div class="py-20 grid grid-row-4 w-10/12">
-        <div class="text-5xl font-semibold mb-5">
+      <div class="banner-secondary__text-section">
+        <div class="banner-secondary__title">
           About Our <span class="text-emphasis">Hospital</span>
         </div>
-        <div class="text-muted mb-5">
+        <div class="banner-secondary__desc">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
           eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum
           suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan
           lacus vel facilisis.
         </div>
-        <div class="text-md">
-          <div class="text-muted my-3">
+        <div class="mb-16">
+          <div class="banner-secondary__bullet-point">
             <img
-              class="inline-block mr-14"
               src="assets/triple-arrow.svg"
               alt="triple arrow bullet point"
             />Browse Our Website
           </div>
-          <div class="text-muted my-3">
+          <div class="banner-secondary__bullet-point">
             <img
-              class="inline-block mr-14"
               src="assets/triple-arrow.svg"
               alt="triple arrow bullet point"
             />Choose Service
           </div>
-          <div class="text-muted my-3">
+          <div class="banner-secondary__bullet-point">
             <img
-              class="inline-block mr-14"
               src="assets/triple-arrow.svg"
               alt="triple arrow bullet point"
             />Send Message
@@ -241,7 +195,7 @@
     </div>
 
     <!-- Latest News -->
-    <div class="mt-48 relative">
+    <div class="latest-news mt-32 relative">
       <div class="text-center text-2xl font-semibold">
         <div>LATEST NEWS</div>
       </div>
@@ -249,15 +203,15 @@
       <div class="w-24 h-px mx-auto my-2 bg-emphasis relative left-8"></div>
 
       <!-- Staggered cards -->
-      <div class="my-3 grid grid-cols-4 gap-3 px-32 mt-10">
-        <div class="shadow-xl p-5 w-11/12">
+      <div class="latest-news__cards-section">
+        <div class="latest-news__card">
           <div>
-            <img src="assets/news-1.png" alt="news image" />
+            <img src="assets/news-1.png" alt="News image" />
           </div>
-          <div class="text-lg w-10/12">
+          <div class="latest-news__card-title">
             Praesent justo mauris, tincidunt vitae nisi ultricies.
           </div>
-          <div class="my-4 text-muted">
+          <div class="latest-news__card-desc">
             Aenean sed velit nulla. Etiam viverra scelerisque porta. Quisque ut
             dolor aliquam, gravida lacus.
           </div>
@@ -280,14 +234,14 @@
             </svg>
           </div>
         </div>
-        <div class="shadow-xl p-5 w-11/12 relative top-24">
+        <div class="latest-news__card relative top-24">
           <div>
             <img src="assets/news-2.png" alt="news image" />
           </div>
-          <div class="text-lg w-10/12">
+          <div class="latest-news__card-title">
             Praesent justo mauris, tincidunt vitae nisi ultricies.
           </div>
-          <div class="my-4 text-muted">
+          <div class="latest-news__card-desc">
             Aenean sed velit nulla. Etiam viverra scelerisque porta. Quisque ut
             dolor aliquam, gravida lacus.
           </div>
@@ -310,14 +264,14 @@
             </svg>
           </div>
         </div>
-        <div class="shadow-xl p-5 w-11/12">
+        <div class="latest-news__card">
           <div>
             <img src="assets/news-3.png" alt="news image" />
           </div>
-          <div class="text-lg w-10/12">
+          <div class="latest-news__card-title">
             Praesent justo mauris, tincidunt vitae nisi ultricies.
           </div>
-          <div class="my-4 text-muted">
+          <div class="latest-news__card-desc">
             Aenean sed velit nulla. Etiam viverra scelerisque porta. Quisque ut
             dolor aliquam, gravida lacus.
           </div>
@@ -340,14 +294,14 @@
             </svg>
           </div>
         </div>
-        <div class="shadow-xl p-5 w-11/12 relative top-24">
+        <div class="latest-news__card relative top-24">
           <div>
             <img src="assets/news-4.png" alt="news image" />
           </div>
-          <div class="text-lg w-10/12">
+          <div class="latest-news__card-title">
             Praesent justo mauris, tincidunt vitae nisi ultricies.
           </div>
-          <div class="my-4 text-muted">
+          <div class="latest-news__card-desc">
             Aenean sed velit nulla. Etiam viverra scelerisque porta. Quisque ut
             dolor aliquam, gravida lacus.
           </div>
@@ -374,7 +328,7 @@
     </div>
 
     <!-- Medical Departments banner -->
-    <div class="grid grid-cols-2 bg-secondary mt-64 px-32 py-16">
+    <div class="banner-secondary mt-64 px-32 py-16">
       <div>
         <div class="uppercase text-3xl font-semibold my-2">
           Medical Departments
@@ -427,6 +381,7 @@
       </div>
     </div>
 
+    <!-- Medical Specialties -->
     <div class="my-20">
       <div class="mb-12">
         <div class="text-center text-3xl font-semibold">
@@ -467,7 +422,8 @@
       </div>
     </div>
 
-    <div>
+    <!-- Reliable Services -->
+    <div class="my-20">
       <div class="mb-24">
         <div class="text-center text-3xl font-semibold">
           <div>Reliable Services</div>
@@ -520,6 +476,67 @@
           </div>
         </div>
       </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="relative">
+      <img src="assets/vector.png" alt="wave background" />
+      <div class="w-full absolute bottom-0 grid grid-cols-4 gap-5 px-32 mb-20">
+        <div>
+          <div class="mb-6">
+            <img src="assets/labninelogo.svg" alt="Labnine" />
+          </div>
+          <div class="text-muted my-4 mb-10">
+            If you're in need of medicines - <br />
+            we're here by your side. <br />
+            Stay safe and buy online!
+          </div>
+          <div class="grid grid-cols-4 w-52">
+            <div>
+              <img src="assets/ig.svg" alt="Instagram" />
+            </div>
+            <div>
+              <img src="assets/linkedin.svg" alt="LinkedIn" />
+            </div>
+            <div>
+              <img src="assets/whatsapp.svg" alt="Whatsapp" />
+            </div>
+            <div class="content-center flex">
+              <img src="assets/twitter.svg" alt="Twitter" />
+            </div>
+          </div>
+        </div>
+        <div>
+          <div class="font-bold text-xl mb-6">Useful Pages</div>
+          <div class="text-muted grid grid-rows-5 gap-2">
+            <div>Shop</div>
+            <div>Gift Cards</div>
+            <div>All Services</div>
+            <div>About Us</div>
+            <div>Contacts</div>
+          </div>
+        </div>
+        <div>
+          <div class="font-bold text-xl mb-6">Contact Us</div>
+          <div class="text-muted">
+            <div>176 W Street Name, New York,</div>
+            <div>NY 10014</div>
+            <div>(123) 456-78-90</div>
+            <div>(123) 456-78-91</div>
+            <div>sales@example.com</div>
+          </div>
+        </div>
+        <div>
+          <div class="font-bold text-xl mb-6">Newsletter</div>
+          <div class="text-muted">
+            Join our newsletter and receive <br />10% off your first puchase
+          </div>
+        </div>
+      </div>
+
+      <!-- Bottom blue bar -->
+
+      <div class="bg-emphasis h-10 absolute w-full bottom-0"></div>
     </div>
   </body>
 </html>
