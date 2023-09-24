@@ -123,3 +123,7 @@
 .latest-news__card-desc {
   @apply my-4 text-muted;
 }
+
+.plain-card {
+  @apply bg-white rounded-md shadow-xl uppercase p-4 text-center;
+}

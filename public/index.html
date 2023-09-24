@@ -346,12 +346,12 @@
     </div>
 
     <!-- Medical Departments banner -->
-    <div class="banner-secondary mt-64 px-32 py-16">
+    <div class="banner-secondary mt-64 section py-16">
       <div>
         <div class="uppercase text-3xl font-semibold my-2">
           Medical Departments
         </div>
-        <div class="flex ml-36 mb-6">
+        <div class="flex lg:ml-36 mb-6">
           <div class="w-16 inline-block h-px bg-emphasis mt-4"></div>
           <div class="ml-3 text-muted font-semibold text-lg">
             The Backbone of our Clinic
@@ -359,13 +359,13 @@
         </div>
 
         <div class="flex">
-          <div class="mr-3 text-muted text-lg font-semibold">
+          <div class="lg:mr-3 text-muted text-lg font-semibold">
             MODERN EQUIPMENT
           </div>
           <div class="w-16 inline-block h-px bg-emphasis mt-3"></div>
         </div>
 
-        <div class="font-semibold text-muted w-11/12 my-3 mb-10 leading-7">
+        <div class="font-semibold text-muted lg:w-11/12 my-3 mb-10 leading-7">
           Personalized patient care is what sets Medicus Medical Center apart.
           When you visit one of our four San Francisco campus locations you can
           expect to receive world class care. Expert physician specialists and
@@ -373,25 +373,23 @@
           what sets Medicus Medical Center apart health care experience.
         </div>
 
-        <div class="grid grid-cols-3 gap-8 w-11/12 text-muted">
-          <div class="bg-white rounded-md shadow-xl uppercase p-4 text-center">
-            Surgery
-          </div>
-          <div class="bg-white rounded-md shadow-xl uppercase p-4 text-center">
-            Microbiology
-          </div>
-          <div class="bg-white rounded-md shadow-xl uppercase p-4 text-center">
-            Pathology
-          </div>
+        <div
+          class="grid lg:grid-cols-3 sm:grid-cols-2 gap-8 lg:w-11/12 text-muted"
+        >
+          <div class="plain-card">Surgery</div>
+          <div class="plain-card">Microbiology</div>
+          <div class="plain-card">Pathology</div>
         </div>
 
         <div class="text-center mt-10">
-          <button class="uppercase bg-emphasis p-5 text-white rounded-xl mr-12">
+          <button
+            class="uppercase bg-emphasis p-5 text-white rounded-xl lg:mr-12"
+          >
             Checkout all departments
           </button>
         </div>
       </div>
-      <div>
+      <div class="mt-20 lg:mt-auto">
         <img
           src="assets/medical-departments-banner.png"
           alt="medical department"
@@ -409,10 +407,26 @@
         <div class="w-40 h-px mx-auto my-2 bg-emphasis relative left-16"></div>
       </div>
 
-      <div class="grid grid-cols-3 gap-10 px-32">
+      <div class="grid lg:grid-cols-3 sm:grid-cols-2 gap-10 section">
         <div class="bg-white shadow-xl">
           <div>
-            <img src="assets/doctor-1.png" alt="doctor 1" />
+            <img
+              src="assets/doctor-1.png"
+              alt="Image of Dr Addison Alexander"
+            />
+          </div>
+          <div class="px-6 pt-6 font-semibold text-muted">
+            Dr. Addison Alexander
+          </div>
+          <div class="px-6 p-3">Cardiac Clinic, Primary Health Care</div>
+        </div>
+
+        <div class="bg-white shadow-xl">
+          <div>
+            <img
+              src="assets/doctor-2.png"
+              alt="Second image of Dr Addison Alexander"
+            />
           </div>
           <div class="px-6 pt-6 font-semibold text-muted">
             Dr. Addison Alexander
@@ -421,16 +435,10 @@
         </div>
         <div class="bg-white shadow-xl">
           <div>
-            <img src="assets/doctor-2.png" alt="doctor 1" />
-          </div>
-          <div class="px-6 pt-6 font-semibold text-muted">
-            Dr. Addison Alexander
-          </div>
-          <div class="px-6 p-3">Cardiac Clinic, Primary Health Care</div>
-        </div>
-        <div class="bg-white shadow-xl">
-          <div>
-            <img src="assets/doctor-3.png" alt="doctor 1" />
+            <img
+              src="assets/doctor-3.png"
+              alt="Third image of Dr Addison Alexander"
+            />
           </div>
           <div class="px-6 pt-6 font-semibold text-muted">
             Dr. Addison Alexander
@@ -450,7 +458,9 @@
         <div class="w-40 h-px mx-auto my-2 bg-emphasis relative left-16"></div>
       </div>
 
-      <div class="grid grid-cols-3 my-6 gap-16 px-32 mx-auto">
+      <div
+        class="grid lg:grid-cols-3 sm:grid-cols-2 my-6 gap-16 section mx-auto"
+      >
         <div>
           <div>
             <img
@@ -499,7 +509,27 @@
     <!-- Footer -->
     <div class="relative">
       <img src="assets/vector.png" alt="wave background" />
-      <div class="w-full absolute bottom-0 grid grid-cols-4 gap-5 px-32 mb-20">
+
+      <div
+        class="grid grid-cols-4 gap-10 absolute bottom-0 mb-16 ml-10 lg:hidden"
+      >
+        <div>
+          <img src="assets/ig.svg" alt="Instagram" />
+        </div>
+        <div>
+          <img src="assets/linkedin.svg" alt="LinkedIn" />
+        </div>
+        <div>
+          <img src="assets/whatsapp.svg" alt="Whatsapp" />
+        </div>
+        <div class="content-center flex">
+          <img src="assets/twitter.svg" alt="Twitter" />
+        </div>
+      </div>
+
+      <div
+        class="w-full absolute bottom-0 lg:grid lg:grid-cols-4 gap-5 px-32 mb-20 hidden"
+      >
         <div>
           <div class="mb-6">
             <img src="assets/labninelogo.svg" alt="Labnine" />
